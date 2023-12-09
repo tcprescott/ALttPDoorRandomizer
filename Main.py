@@ -289,7 +289,7 @@ def main(args, seed=None, fish=None):
                         patch_enemizer(world, player, rom, local_rom, args.enemizercli, sprite_random_on_hit)
                         enemized = True
                         if not args.jsonout:
-                            rom = LocalRom.fromJsonRom(rom, args.rom, 0x400000)
+                            rom = LocalRom.fromJsonRom(rom, args.rom)
                     else:
                         enemizerMsg  = world.fish.translate("cli","cli","enemizer.not.found") + ': ' + args.enemizercli + "\n"
                         enemizerMsg += world.fish.translate("cli","cli","enemizer.nothing.applied")
